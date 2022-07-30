@@ -33,15 +33,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Column(
-        children: [
-          DraggableCard(
-              child: const CircleAvatar(
-            backgroundColor: Colors.green,
-          ))
-        ],
+      appBar: AppBar(
+        title: const Text('Dragging Widget animation'),
       ),
+      body: const DraggableCard(
+          child: FlutterLogo(
+        size: 128,
+      )),
     );
   }
 }
