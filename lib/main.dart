@@ -1,3 +1,4 @@
+import 'package:animations/page%20transition/route.dart';
 import 'package:flutter/material.dart';
 
 import 'draggable_card.dart';
@@ -40,6 +41,21 @@ class _HomePageState extends State<HomePage> {
           child: FlutterLogo(
         size: 128,
       )),
+      bottomSheet: GestureDetector(
+        onTap: () {
+          Navigator.push(context, createRoute());
+        },
+        child: Container(
+          height: 50,
+          margin:
+              const EdgeInsets.only(left: 20, right: 20),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20.0),
+              color: Colors.orangeAccent),
+          child: const Center(
+              child: Text('Animated Container Demo')),
+        ),
+      ),
     );
   }
 }
